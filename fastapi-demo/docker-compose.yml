@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    image: python
+    container_name: postgres
+    ports:
+      - '6500:5432'
+    restart: always
+    env_file:
+      - ./.env
+    volumes:
+      - postgres-db:''
+volumes:
+  postgres-db:
+
